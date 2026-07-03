@@ -4,7 +4,9 @@
 
 // Base de datos simulada
 const usuarios = [
-  { usuario: "admin", password: "admin123", tipo: "administrador" },
+  // RAMA MAIN cambia esta línea:
+{ usuario: "admin", password: "admin123", tipo: "administrador", nivel: "SUPER" },
+
   { usuario: "colaborador1", password: "colab123", tipo: "colaborador" },
   { usuario: "colaborador2", password: "colab456", tipo: "colaborador" }
 ];
