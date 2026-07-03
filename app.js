@@ -27,7 +27,7 @@ if (loginForm) {
       sessionStorage.setItem("usuarioActivo", JSON.stringify(encontrado));
       window.location.href = "prestamo.html";
     } else {
-      errorMsg.textContent = "❌ Usuario, contraseña o tipo incorrecto.";
+      errorMsg.textContent = "Usuario, contraseña o tipo incorrecto.";
     }
   });
 }
