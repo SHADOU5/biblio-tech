@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIBLIO-TECH | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <h1>BIBLIO-TECH</h1>
+      </div>
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" id="usuario" placeholder="Ingrese usuario" required>
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" id="password" placeholder="Ingrese contraseña" required>
+        </div>
+        <div class="form-group">
+          <label>Tipo de Usuario</label>
+          <select id="tipoUsuario">
+            <option value="administrador">Administrador</option>
+            <option value="colaborador">Colaborador</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">INGRESAR AL SISTEMA</button>
+        <p id="error-msg" class="error-msg"></p>
+      </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

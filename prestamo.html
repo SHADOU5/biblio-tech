@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>BIBLIO-TECH | Nuevo Préstamo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card wide">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <h1>BIBLIO-TECH</h1>
+      </div>
+      <h2>Nuevo Préstamo</h2>
+
+      <!-- Identificación del Lector -->
+      <div class="section">
+        <h3>1. Identificación del Lector</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>ID del Lector</label>
+            <input type="text" id="idLector" placeholder="Ej: 20210001">
+          </div>
+          <div class="form-group">
+            <label>Nombre del Lector</label>
+            <input type="text" id="nombreLector" placeholder="Nombre completo">
+          </div>
+        </div>
+      </div>
+
+      <!-- Datos del Libro -->
+      <div class="section">
+        <h3>2. Datos del Libro</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Código ISBN</label>
+            <input type="text" id="isbn" placeholder="978-X-XX-XXXXXX-X">
+          </div>
+          <button class="btn-secondary" onclick="buscarLibro()">Buscar</button>
+        </div>
+        <div class="form-group">
+          <label>Título del Libro</label>
+          <input type="text" id="tituloLibro" placeholder="Se llenará automáticamente" readonly>
+        </div>
+      </div>
+
+      <!-- Tipo de Préstamo -->
+      <div class="section">
+        <h3>3. Condiciones</h3>
+        <div class="radio-group">
+          <label><input type="radio" name="tipo" value="1"> 1 Día</label>
+          <label><input type="radio" name="tipo" value="14" checked> 14 Días</label>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="registrarPrestamo()">
+        ➕ GUARDAR NUEVO PRÉSTAMO
+      </button>
+      <p id="prestamo-msg" class="success-msg"></p>
+
+      <br>
+      <a href="devoluciones.html" class="btn-link">Ir a Devoluciones →</a>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

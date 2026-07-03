@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>BIBLIO-TECH | Devoluciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card wide">
+      <div class="header-bar">
+        <div class="logo">
+          <span class="logo-icon">📚</span>
+          <h1>BIBLIO-TECH</h1>
+        </div>
+        <div class="url-bar">www.bibliotech.com.pe/devoluciones</div>
+        <a href="index.html" class="btn-secondary small">Cerrar Sesión</a>
+      </div>
+
+      <h2>Devolución de Libros</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Escanee Código del Libro</label>
+          <input type="text" id="isbnDevolucion" placeholder="978-X-XX-XXXXXX-X">
+        </div>
+        <button class="btn-primary" onclick="procesarDevolucion()">Procesar</button>
+      </div>
+
+      <!-- Tabla resultado -->
+      <div id="resultadoDevolucion" style="display:none;">
+        <table class="tabla-resultado">
+          <thead>
+            <tr>
+              <th>Libro Escaneado</th>
+              <th>Lector Responsable</th>
+              <th>Vencimiento</th>
+              <th>Retraso</th>
+            </tr>
+          </thead>
+          <tbody id="tablaBody"></tbody>
+        </table>
+
+        <div id="alertaMora" class="alerta-mora" style="display:none;">
+          ⚠️ ALERTA: Se detectó retraso. Mora total: <strong id="montoMora"></strong>
+          <span class="multa-badge">✅ Multa pagada en ventanilla</span>
+        </div>
+
+        <button class="btn-success" onclick="registrarIngreso()">
+          📦 REGISTRAR INGRESO A ALMACÉN
+        </button>
+        <p id="ingreso-msg" class="success-msg"></p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
