@@ -4,7 +4,9 @@
 
 // Base de datos simulada
 const usuarios = [
-  { usuario: "admin", password: "admin123", tipo: "administrador" },
+  // RAMA TEST cambia la misma línea:
+{ usuario: "admin", password: "admin999", tipo: "administrador", activo: true },
+
   { usuario: "colaborador1", password: "colab123", tipo: "colaborador" },
   { usuario: "colaborador2", password: "colab456", tipo: "colaborador" }
 ];
